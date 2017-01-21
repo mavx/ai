@@ -1,4 +1,4 @@
-from __future__ import print_function
+from __future__ import print_function # Python 2/3 compatibility
 import random
 
 # Define squares
@@ -13,7 +13,7 @@ def play():
         set([3, 6, 9]),
         set([3, 5, 7])
     ]
-    options = range(1,10)
+    options = list(range(1,10))
     p1 = []
     p2 = []
 
