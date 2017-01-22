@@ -56,12 +56,11 @@ def play():
 def main():
     sample = []
     x = 0
-    while x < 100:
+    while x < 1000:
         sample.append(play())
         x += 1
-    
-    for s in sample:
-        print(s)
+    print('Returning {} completed games...'.format(len(sample)))
+    return [s for s in sample]
 
 
 if __name__ == '__main__':
