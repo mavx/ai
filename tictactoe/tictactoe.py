@@ -29,7 +29,7 @@ def play():
             if any(set(s).issubset(p1) for s in win):
                 # combo, result = [p1, p2], 1
                 iters = [iter(p1), iter(p2)]
-                state = list(it.next() for it in itertools.cycle(iters))
+                state = list(next(it) for it in itertools.cycle(iters))
                 result = [state, 1]
                 break
 
@@ -41,12 +41,12 @@ def play():
             if len(p2) > 2:
                 if any(set(s).issubset(p2) for s in win):
                     iters = [iter(p1), iter(p2)]
-                    state = list(it.next() for it in itertools.cycle(iters))
+                    state = list(next(it) for it in itertools.cycle(iters))
                     result = [state, -1]
                     break
         else:
             iters = [iter(p1), iter(p2)]
-            state = list(it.next() for it in itertools.cycle(iters))
+            state = list(next(it) for it in itertools.cycle(iters))
             result = [state, 0]
             break
 
